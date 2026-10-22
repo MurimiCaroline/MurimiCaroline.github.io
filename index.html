@@ -124,6 +124,12 @@
     .list .title { font-weight: 600; }
     .list .sub { font-size: 15px; color: var(--muted); }
     .list .tag { font-size: 14px; color: var(--muted); white-space: nowrap; }
+    .list .desc { font-size: 15px; color: var(--muted); margin-top: 6px; }
+    .list .desc li { display: list-item; list-style: disc; margin-left: 18px; padding: 2px 0; border: 0; }
+    .stack { margin-top: 36px; }
+    .stack p.label { margin-bottom: 12px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chips span { font-size: 14px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
     .label { font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
 
@@ -174,9 +180,9 @@
     <section class="hero">
       <div class="wrap">
         <div>
-          <p class="eyebrow">Electrical Engineer · Data · Nairobi</p>
+          <p class="eyebrow">Data Centre Operations · Energy Data · Nairobi</p>
           <h1>Where power systems meet <em>data.</em></h1>
-          <p class="lede">I use data to monitor, plan and optimise how critical infrastructure uses energy, from data centre cooling to the grid assets behind it.</p>
+          <p class="lede">I use data to monitor, plan and optimise how critical infrastructure uses energy, tracking the energy KPIs that matter, from data centre cooling to the grid assets behind it.</p>
           <div class="actions">
             <a class="btn primary" href="#work">See my work</a>
             <a class="btn ghost" href="https://www.linkedin.com/in/caroline-murimi-949176223/" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -197,13 +203,17 @@
           <h2>About</h2>
         </div>
         <div>
-          <p>I'm an Electrical and Electronics Engineering graduate from Moi University, working at the point where engineering, data analytics and infrastructure operations overlap.</p>
-          <p>My experience spans data centre operations and planning at Safaricom, and earlier work with Kenya Power and REREC. Alongside that, I'm completing the ALX Data Science programme and hold Huawei's HCIA Cloud &amp; AI certification.</p>
-          <p>The question I keep coming back to: how do we use data to make energy-intensive infrastructure more efficient and reliable?</p>
+          <p>I'm an electrical engineer working in data centre operations and planning at Safaricom, where I keep Tier-certified facilities running and use data to understand how they consume energy.</p>
+          <p>My days move between the plant room and the dashboard: maintaining UPS, generator, HVAC and power distribution systems, executing live changes with zero downtime, and building the pipelines that turn monitoring data into energy KPI reporting.</p>
+          <p>I hold a BEng in Electrical and Electronics Engineering from Moi University and have completed ALX's Data Science programme. The question I keep coming back to: how do we use data to make energy-intensive infrastructure more efficient and reliable?</p>
           <div class="focus">
-            <div><strong>Power &amp; energy</strong><span>Power systems, energy efficiency, consumption baselining</span></div>
+            <div><strong>Power &amp; energy</strong><span>UPS, generators, HVAC, power distribution, energy KPIs</span></div>
             <div><strong>Data &amp; AI</strong><span>Python, machine learning, anomaly detection, computer vision</span></div>
-            <div><strong>Infrastructure</strong><span>Data centre operations, capacity planning, cloud</span></div>
+            <div><strong>Infrastructure</strong><span>DCIM, digital twins, capacity planning, cloud</span></div>
+          </div>
+          <div class="stack">
+            <p class="label">Tools I work with</p>
+            <div class="chips"><span>Python</span><span>YOLO</span><span>Huawei NetEco</span><span>Schneider DCE</span><span>Google ADK</span><span>Vertex AI</span><span>SAP MM</span></div>
           </div>
         </div>
       </div>
@@ -220,16 +230,30 @@
 
           <article class="project">
             <p class="meta">Data centre energy · Work project</p>
-            <h3>EnergySense: AI energy baselining and anomaly detection</h3>
-            <p>An AI model that learns the normal energy profile of data centre cooling systems and flags when consumption drifts from that baseline, so operations teams can catch inefficiencies early. The proof of concept is complete and the use case is moving into development.</p>
-            <div class="tags"><span>Machine learning</span><span>Anomaly detection</span><span>Energy analytics</span><span>Data centres</span></div>
+            <h3>AI energy baselining and anomaly detection</h3>
+            <p>An AI approach to establishing energy baselines for data centre infrastructure and flagging unusual consumption early.</p>
+            <div class="tags"><span>Machine learning</span><span>Anomaly detection</span><span>Energy analytics</span></div>
+          </article>
+
+          <article class="project">
+            <p class="meta">Energy reporting · Work project</p>
+            <h3>Automated energy KPI reporting</h3>
+            <p>Data pipelines and dashboards that automate how energy performance is tracked and reported across data centre operations.</p>
+            <div class="tags"><span>Data pipelines</span><span>Dashboards</span><span>Energy KPIs</span></div>
+          </article>
+
+          <article class="project">
+            <p class="meta">Digital twin · Work project</p>
+            <h3>Data centre digital twin</h3>
+            <p>Leading a digital twin initiative that supports data centre planning and operations.</p>
+            <div class="tags"><span>Digital twin</span><span>Planning</span></div>
           </article>
 
           <article class="project">
             <p class="meta">Computer vision</p>
-            <h3>Number plate recognition model</h3>
-            <p>Trained an AI model to detect and read vehicle number plates from images, covering data preparation, model training and evaluation end to end.</p>
-            <div class="tags"><span>Python</span><span>Computer vision</span><span>Deep learning</span><span>Google Colab</span></div>
+            <h3>Number plate recognition with YOLO</h3>
+            <p>Trained a YOLO object detection model to locate and recognise vehicle number plates in images, covering data preparation, training and evaluation end to end.</p>
+            <div class="tags"><span>Python</span><span>YOLO</span><span>Computer vision</span><span>Google Colab</span></div>
             <a class="link" href="https://colab.research.google.com/drive/1WGKEyXRCzCIqsd8e6tNEQZK6TqMFMKo7" target="_blank" rel="noopener">View notebook ↗</a>
           </article>
 
@@ -252,21 +276,40 @@
           <h2>Background</h2>
         </div>
         <div>
-          <div class="two-col">
+          <p class="label">Experience</p>
+          <ul class="list">
+            <li><div><div class="title">Data Centre Operations &amp; Planning</div><div class="sub">Safaricom PLC · Internship</div>
+              <ul class="desc">
+                <li>Preventive maintenance on UPS, generators, HVAC and power distribution across Tier-certified facilities</li>
+                <li>Live change requests, including breaker upgrades and rPDU swaps, with zero downtime</li>
+                <li>Supported Uptime TCCF certification through hands-on checks of LV boards, EHUs and water pumps</li>
+                <li>DCIM monitoring with Huawei NetEco and Schneider DCE</li>
+              </ul></div><div class="tag">Nov 2025 – Present</div></li>
+            <li><div><div class="title">Engineering Attachment</div><div class="sub">Rural Electrification and Renewable Energy Corporation (REREC)</div>
+              <ul class="desc">
+                <li>Supervised 10+ electrification projects</li>
+                <li>Managed inventory in SAP as a store assistant</li>
+              </ul></div><div class="tag">Jun – Sep 2024</div></li>
+            <li><div><div class="title">Engineering Intern</div><div class="sub">Kenya Power</div>
+              <ul class="desc">
+                <li>Distribution network operations, fault finding and street lighting</li>
+              </ul></div><div class="tag">May – Jul 2023</div></li>
+          </ul>
+
+          <div class="two-col" style="margin-top:56px">
             <div>
-              <p class="label">Experience</p>
+              <p class="label">Education</p>
               <ul class="list">
-                <li><div><div class="title">Data Center Operations &amp; Planning</div><div class="sub">Safaricom PLC</div></div><div class="tag">Intern</div></li>
-                <li><div><div class="title">Engineering Attachment</div><div class="sub">Kenya Power</div></div><div class="tag">Attachee</div></li>
-                <li><div><div class="title">SAP Materials Management</div><div class="sub">REREC</div></div><div class="tag">Attachee</div></li>
+                <li><div><div class="title">BEng Electrical &amp; Electronics Engineering</div><div class="sub">Moi University · Second Class Upper Honours</div></div><div class="tag">2025</div></li>
               </ul>
             </div>
             <div>
-              <p class="label">Education &amp; certifications</p>
+              <p class="label">Certifications</p>
               <ul class="list">
-                <li><div><div class="title">BSc Electrical &amp; Electronics Engineering</div><div class="sub">Moi University · Second Class Upper Honours</div></div><div class="tag">2025</div></li>
-                <li><div><div class="title">Data Science Programme</div><div class="sub">ALX</div></div><div class="tag">In progress</div></li>
-                <li><div><div class="title">HCIA Cloud &amp; AI</div><div class="sub">Huawei</div></div><div class="tag">Certified</div></li>
+                <li><div><div class="title">Data Science</div><div class="sub">ALX</div></div><div class="tag">2026</div></li>
+                <li><div><div class="title">Data Analytics</div><div class="sub">ALX</div></div><div class="tag">2026</div></li>
+                <li><div><div class="title">Business Analytics</div><div class="sub">Simplilearn</div></div><div class="tag">2025</div></li>
+                <li><div><div class="title">HCIA-AI and HCIA-Cloud</div><div class="sub">Huawei</div></div><div class="tag">2024</div></li>
               </ul>
             </div>
           </div>
@@ -275,8 +318,8 @@
             <p class="label">Recognition &amp; community</p>
             <ul class="list">
               <li><div><div class="title">Global Finalist, Huawei ICT Competition</div><div class="sub">Represented Kenya · 3rd Prize and Women in Tech Award</div></div><div class="tag">International</div></li>
-              <li><div><div class="title">Campus Lead</div><div class="sub">Google Developer Student Clubs</div></div><div class="tag">Leadership</div></li>
-              <li><div><div class="title">Chapter Officer</div><div class="sub">IEEE Student Chapter</div></div><div class="tag">Leadership</div></li>
+              <li><div><div class="title">Volunteer, IEEE Kenya Section</div><div class="sub">Former Finance Officer · TechX Eldoret, Luna Hacks · Secretary, IEEE Entrepreneurship Summit 2025, Rwanda</div></div><div class="tag">2022 – Present</div></li>
+              <li><div><div class="title">Lead, Google Developer Student Clubs Moi</div><div class="sub">10+ sessions, 100+ participants, 95% satisfaction</div></div><div class="tag">2021 – 2023</div></li>
               <li><div><div class="title">Career talk on emerging data careers</div><div class="sub">Kenyan high school students</div></div><div class="tag">Speaking</div></li>
             </ul>
           </div>
